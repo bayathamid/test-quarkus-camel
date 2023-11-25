@@ -17,5 +17,4 @@ public class CamelRoute extends RouteBuilder{
         .log("${body}");
     }
     
-//test-git
 }
