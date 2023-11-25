@@ -40,8 +40,11 @@ You can create a native executable using:
 
 Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
 ```shell script
-./mvnw package -Dnative -Dquarkus.native.container-build=true
+./mvnw package `-Dnative `-Dquarkus.native.container-build=true
 ```
+
+quarkus build --native --no-tests -Dquarkus.native.container-build=true
+# The --no-tests flag is required only on Windows and macOS.
 
 You can then execute your native executable with: `./target/test-quarkus-camel-1.0.0-SNAPSHOT-runner`
 

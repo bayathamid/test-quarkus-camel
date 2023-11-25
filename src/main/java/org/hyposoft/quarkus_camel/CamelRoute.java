@@ -12,7 +12,7 @@ public class CamelRoute extends RouteBuilder{
         .unmarshal().json(JsonLibrary.Jackson,Package.class)
         .process(exchange -> {
             Package package1 = exchange.getIn().getBody(Package.class);            
-            exchange.getMessage().setBody(package1.id);
+            exchange.getMessage().setBody(package1.time);
         })
         .log("${body}");
     }
